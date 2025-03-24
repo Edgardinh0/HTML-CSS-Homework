@@ -21,10 +21,9 @@ body {
     font-size: 24px;
     font-weight: 300;
     margin: auto 0;
-}
-
-.navigation a {
-    margin-right: 40px;
+    display: flex;
+    gap: 50px;
+    padding: 0 80px;
 }
 
 main {
@@ -130,23 +129,51 @@ main {
 }
 
 .button {
-    width: fit-content;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     border: 3px solid #FFFFFF;
     font-size: 20px;
     font-weight: 300;
-    padding: 0 55px;
     margin-bottom: 28px;
+    background-color: #817070;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.button::placeholder {
+    color: #FFFFFF;
+    width: fit-content;
+    text-align: center;
 }
 
 .button2 {
     background-color: #FFFFFF;
     width: fit-content;
+    display: flex;
+    justify-content: center;
+    border: none;
     margin: 0 auto;
     font-size: 20px;
     font-weight: 500;
+    font-family: "Oswald", sans-serif;
     padding: 1px 25px;
     color: #817070;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.button2:hover{
+    background-color: #817070;
+    color: #FFFFFF;
+}
+
+.button2::before{
+    position: absolute;
+}
+
+.button2:active{
+    color: red;
 }
 
 .footer {
