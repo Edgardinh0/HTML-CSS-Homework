@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  padding: 10px 30px;
+}
+.header-wrapper .header-link {
+  align-self: center;
+  font-size: 18px;
+}
+.header-wrapper .sign-in-button {
+  background-color: #0b57d0;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: none;
+  font-size: 18px;
+}
+.header-wrapper .sign-in-button:hover {
+  cursor: pointer;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  padding: 100px 300px;
+  gap: 30px;
+}
+.main-wrapper .google-image {
+  width: 500px;
+  align-self: center;
+}
+.main-wrapper .input-wrapper {
+  padding: 0 15px;
+  border-radius: 15px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  /* background-color: lightgray; */
+  /* justify-content: center; */
+  border: 2px solid lightgrey;
+  align-self: center;
+  gap: 15px;
+}
+.main-wrapper .input-wrapper .image {
+  height: 20px;
+  width: 20px;
+  color: #9aa0a6;
+  margin-top: 9px;
+}
+.main-wrapper .input-wrapper .main-input {
+  width: 350px;
+  /* align-self: center; */
+  border-radius: 20px;
+  padding: 10px 0 10px 0;
+  border: none;
+}
+.main-wrapper .input-wrapper .main-input:focus {
+  outline: none;
+}
+.main-wrapper .input-wrapper .tia-image {
+  height: 11px;
+  width: 19px;
+  align-self: center;
+}
+.main-wrapper .button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.main-wrapper .button-wrapper .main-btn {
+  border: 1px solid #f8f9fa;
+  padding: 10px;
+  background-color: #f8f9fa;
+  color: #3c4043;
+}
+.main-wrapper .button-wrapper .main-btn:hover {
+  border-color: grey;
+}
+
+footer {
+  background-color: #f2f2f2;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+footer .country {
+  padding: 10px 30px;
+  font-size: 18px;
+}
+footer .last-footer {
+  display: flex;
+  flex-direction: column;
+}
+footer .last-footer .climate {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+}
+footer .last-footer .links {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+footer .last-footer .links .footer-sides {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+}/*# sourceMappingURL=style1.css.map */
