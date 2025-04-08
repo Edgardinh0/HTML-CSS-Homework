@@ -1,12 +1,18 @@
 $background-color: #0f0f0f;
-$button-color: rgb(86, 86, 86);
-$button-hover-color: rgb(153, 153, 153);
+$button-color: rgb(41, 41, 41);
+$button-hover-color: rgb(79, 79, 79);
 $main-text-color: white;
 $very-small-text-color: rgba(180, 180, 180, 0.633);
+$time-code: rgba(15, 15, 15, 0.39);
 
 @mixin svg-size {
-    height: 30px;
-    width: 30px;
+    height: 24px;
+    width: 24px;
+}
+
+@mixin button-hover {
+    background-color: $button-hover-color;
+    cursor: pointer;
 }
 
 body {
@@ -25,14 +31,18 @@ body {
 
     .__header-wrapper{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 100px;
         box-sizing: border-box;
 
         .__logo {
             width: 96px;
-            height:20px
+            height: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         .__input {
@@ -42,7 +52,7 @@ body {
             gap: 20px;
             height: 30px;
             border: 1px solid $button-color;
-            padding: 5px 30px;
+            padding: 5px 15px;
             border-radius: 15px;
 
             .__searchbar {
@@ -57,19 +67,28 @@ body {
             }
 
             .__input-btns {
-                height: 30px;
-                width: 30px;
+                height: 24px;
+                width: 60px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                gap: 15px;
 
                 .__keyboard {
                     height: 10px;
-                    width: 30px;
+                    width: auto;
                 }
+            }
 
-                .__glass {
-                    width: 50px;
+            .__mic-btn {
+                background-color: $background-color;
+                border: none;
+                padding: 5px;
+                border-radius: 20px;
+                transition: ease-in-out 0.2s;
+
+                &:hover {
+                    @include button-hover();
                 }
             }
         }
@@ -80,12 +99,32 @@ body {
             align-items: center;
 
             .__createbtn {
-                background-color: $button-color;
+                background-color: $background-color;
                 border: none;
-                border-radius: 15px;
+                border-radius: 20px;
                 color: $main-text-color;
                 padding: 10px;
                 font-size: 14px;
+                display: flex;
+                align-items: center;
+                transition: ease-in-out 0.2s;
+
+                &:hover {
+                    @include button-hover();
+                }
+            }
+
+            .__channel {
+                background-color: $background-color;
+                border: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .__photo {
+                    border-radius: 15px;
+                }
             }
         }
     }
@@ -93,47 +132,85 @@ body {
     .main-topbuttons {
         display: flex;
         gap: 10px;
-        // background-color: $button-color;
 
         .__button {
             background-color: $button-color;
-            border: 1px solid $button-color;
+            border: none;
             border-radius: 10px;
             padding: 10px;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 700;
             color: $main-text-color;
+            transition: ease-in-out 0.2s;
+
+            &:hover {
+                @include button-hover();
+            }
         }
     }
 
     .main-videos-wrapper {
-        display: inline-grid;
-        grid-template-columns: repeat(4, auto);
+        display: flex;
+        flex-wrap: wrap;
         gap: 70px;
 
         .__box {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            width: 300px;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+            }
 
             .__box-img {
                 border-radius: 10px;
+                background-image: url("./assets/placeholder.png");
+                height: 200px;
+                width: 300px;
+
+                .__box-img-text {
+                    position: absolute;
+                    bottom: 80px;
+                    right: 16px;
+                    background-color: $time-code;
+                    border-radius: 5px;
+                    padding: 3px;
+                    font-weight: 700;
+                }
             }
 
             .__title {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                display: grid;
+                grid-template-columns: 32px 1fr 15px;
+                column-gap: 10px;
+
+                .__photo {
+                    border-radius: 15px;
+                }
 
                 .__text {
                     color: $main-text-color;
-                    font-size: 18px;
+                    font-size: 20px;
                     margin: 0;
+                    align-self: center;
                 }
 
                 .__btn {
-                    height: 10px;
-                    width: 10px;
+                    color: white;
+                    background-color: $background-color;
+                    border: none;
+                    padding: 0;
+
+                    .__threedots {
+                        width: 20px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
 
@@ -141,12 +218,16 @@ body {
                 display: flex;
                 flex-direction: column;
                 color: $very-small-text-color;
-                font-size: 10px;
+                font-size: 14px;
                 
                 .__channelname {
                     color: $very-small-text-color;
                     font-size: 14px;
                     margin: 0;
+
+                    &:hover {
+                        color: white;
+                    }
                 }
 
                 .__views-date {
