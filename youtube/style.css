@@ -183,6 +183,8 @@ body .main-videos-wrapper .__box .__smalltext .__channelname {
   color: rgba(180, 180, 180, 0.633);
   font-size: 14px;
   margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 body .main-videos-wrapper .__box .__smalltext .__channelname:hover {
   color: white;
