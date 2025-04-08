@@ -1,0 +1,160 @@
+$background-color: #0f0f0f;
+$button-color: rgb(86, 86, 86);
+$button-hover-color: rgb(153, 153, 153);
+$main-text-color: white;
+$very-small-text-color: rgba(180, 180, 180, 0.633);
+
+@mixin svg-size {
+    height: 30px;
+    width: 30px;
+}
+
+body {
+    height: 100vh;
+    background-color: $background-color;
+    padding: 5px 30px;
+    color: $main-text-color;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    svg {
+        @include svg-size();
+        color: white;
+    }
+
+    .__header-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        box-sizing: border-box;
+
+        .__logo {
+            width: 96px;
+            height:20px
+        }
+
+        .__input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 30px;
+            border: 1px solid $button-color;
+            padding: 5px 30px;
+            border-radius: 15px;
+
+            .__searchbar {
+                background-color: $background-color;
+                border: none;
+                width: 500px;
+                color: $main-text-color;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .__input-btns {
+                height: 30px;
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .__keyboard {
+                    height: 10px;
+                    width: 30px;
+                }
+
+                .__glass {
+                    width: 50px;
+                }
+            }
+        }
+
+        .__rightbuttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            .__createbtn {
+                background-color: $button-color;
+                border: none;
+                border-radius: 15px;
+                color: $main-text-color;
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .main-topbuttons {
+        display: flex;
+        gap: 10px;
+        // background-color: $button-color;
+
+        .__button {
+            background-color: $button-color;
+            border: 1px solid $button-color;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: $main-text-color;
+        }
+    }
+
+    .main-videos-wrapper {
+        display: inline-grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 70px;
+
+        .__box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .__box-img {
+                border-radius: 10px;
+            }
+
+            .__title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .__text {
+                    color: $main-text-color;
+                    font-size: 18px;
+                    margin: 0;
+                }
+
+                .__btn {
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+
+            .__smalltext {
+                display: flex;
+                flex-direction: column;
+                color: $very-small-text-color;
+                font-size: 10px;
+                
+                .__channelname {
+                    color: $very-small-text-color;
+                    font-size: 14px;
+                    margin: 0;
+                }
+
+                .__views-date {
+                    color: $very-small-text-color;
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
