@@ -19,6 +19,7 @@ body a {
 body .__header-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   box-sizing: border-box;
 }
@@ -203,4 +204,16 @@ body .main-videos-wrapper .__box .__smalltext .__views-date {
   color: rgba(180, 180, 180, 0.633);
   font-size: 14px;
   margin: 0;
+}
+
+@media screen and (max-width: 1032px) {
+  .__header-wrapper {
+    gap: 10px;
+  }
+  .__input {
+    width: 280px;
+  }
+  .__searchbar {
+    width: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */

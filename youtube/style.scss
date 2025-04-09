@@ -37,6 +37,7 @@ body {
     .__header-wrapper{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
         box-sizing: border-box;
 
@@ -253,5 +254,19 @@ body {
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1032px) {
+    .__header-wrapper {
+        gap: 10px;
+    }
+    
+    .__input {
+        width: 280px;
+    }
+    
+    .__searchbar {
+        width: 50px;
     }
 }
