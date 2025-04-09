@@ -12,11 +12,14 @@ body svg {
   width: 24px;
   color: white;
 }
+body a {
+  text-decoration: none;
+  color: white;
+}
 body .__header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 100px;
   box-sizing: border-box;
 }
 body .__header-wrapper .__logo {
@@ -100,6 +103,7 @@ body .__header-wrapper .__rightbuttons .__channel .__photo {
 }
 body .main-topbuttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 body .main-topbuttons .__button {
@@ -119,7 +123,8 @@ body .main-topbuttons .__button:hover {
 body .main-videos-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 70px;
+  gap: 40px;
+  padding-bottom: 20px;
 }
 body .main-videos-wrapper .__box {
   display: flex;
@@ -131,15 +136,14 @@ body .main-videos-wrapper .__box {
 body .main-videos-wrapper .__box:hover {
   cursor: pointer;
 }
-body .main-videos-wrapper .__box .__box-img {
+body .main-videos-wrapper .__box .__box-img .__background-img {
   border-radius: 10px;
-  background-image: url("./assets/placeholder.png");
   height: 200px;
   width: 300px;
 }
 body .main-videos-wrapper .__box .__box-img .__box-img-text {
   position: absolute;
-  bottom: 80px;
+  top: 150px;
   right: 16px;
   background-color: rgba(15, 15, 15, 0.39);
   border-radius: 5px;
@@ -160,6 +164,12 @@ body .main-videos-wrapper .__box .__title .__text {
   font-size: 20px;
   margin: 0;
   align-self: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 body .main-videos-wrapper .__box .__title .__btn {
   color: white;

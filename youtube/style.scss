@@ -29,11 +29,15 @@ body {
         color: white;
     }
 
+    a {
+        text-decoration: none;
+        color: $main-text-color;
+    }
+
     .__header-wrapper{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 100px;
         box-sizing: border-box;
 
         .__logo {
@@ -131,6 +135,7 @@ body {
 
     .main-topbuttons {
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
 
         .__button {
@@ -152,7 +157,8 @@ body {
     .main-videos-wrapper {
         display: flex;
         flex-wrap: wrap;
-        gap: 70px;
+        gap: 40px;
+        padding-bottom: 20px;
 
         .__box {
             display: flex;
@@ -166,14 +172,15 @@ body {
             }
 
             .__box-img {
-                border-radius: 10px;
-                background-image: url("./assets/placeholder.png");
-                height: 200px;
-                width: 300px;
+                .__background-img {
+                    border-radius: 10px;
+                    height: 200px;
+                    width: 300px;
+                }
 
                 .__box-img-text {
                     position: absolute;
-                    bottom: 80px;
+                    top: 150px;
                     right: 16px;
                     background-color: $time-code;
                     border-radius: 5px;
@@ -196,6 +203,14 @@ body {
                     font-size: 20px;
                     margin: 0;
                     align-self: center;
+
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
                 }
 
                 .__btn {
